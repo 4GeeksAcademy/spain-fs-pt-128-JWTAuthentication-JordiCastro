@@ -77,7 +77,9 @@ export const Private = () => {
                 <div className="container bg-white p-5">
                     <div className="user-info d-flex justify-content-between align-items-center">
                         <div className="photo-wrapper">
-                            <img className="user-photo rounded-circle shadow" src="https://media.tenor.com/znx_AntI870AAAAM/gorilla-middle-finger.gif" alt="" />
+                            <button type="button" className="user-photo img-thumbnail" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <img className="user-photo rounded-circle shadow" src="https://media.tenor.com/znx_AntI870AAAAM/gorilla-middle-finger.gif" alt="" />
+                            </button>
                             <p className="mt-1">@{usuario}</p>
                         </div>
                         <div className="user-data d-flex gap-3">
@@ -120,6 +122,25 @@ export const Private = () => {
                             </div>
                         </div>
 
+                    </div>
+
+                    {/* Modal */}
+                    <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="exampleModalLabel">Change image</h5>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div className="modal-body">
+                                    ¿Me odias, verdad? ¿Quieres cambiarme, verdad?
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" className="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
